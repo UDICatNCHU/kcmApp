@@ -13,6 +13,6 @@ def kcm(request):
     keyword = request.GET['keyword']
     lang = request.GET['lang']
 
-    i = KCM(lang, uri)
+    i = KCM(lang, lang, uri=uri)
     result = i.get(keyword, int(request.GET['num']) if 'num' in request.GET else 10)
     return JsonResponse(result, safe=False)
