@@ -2,7 +2,7 @@
 from django.http import JsonResponse
 from djangoApiDec.djangoApiDec import queryString_required
 from KCM.__main__ import KCM
-from KCM_web_api.settings_database import uri
+from udic_nlp_API.settings_database import uri
 
 @queryString_required(['lang', 'keyword'])
 def kcm(request):
